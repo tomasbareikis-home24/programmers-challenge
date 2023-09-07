@@ -1,3 +1,4 @@
 #!/bin/sh
 
-php test.php
+# php php/run.php
+node js/run.js

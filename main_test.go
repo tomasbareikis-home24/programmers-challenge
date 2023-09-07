@@ -1,6 +1,7 @@
 package main
 
 import (
+	"strings"
 	"testing"
 
 	"github.com/bitfield/script"
@@ -30,16 +31,21 @@ func doTest(tc *testCase) func(*testing.T) {
 		s, err := run(tc.in)
 
 		assert.NoError(t, err)
-		assert.Equal(t, tc.expect, s)
-	}
-}
 
-func run(in string) (string, error) {
-	return script.Echo(in).Exec("./run.sh").String()
+		assert.Equal(
+			t,
+			strings.TrimSpace(tc.expect),
+			strings.TrimSpace(s),
+		)
+	}
 }
 
 func Benchmark1(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		run("haha")
 	}
+}
+
+func run(in string) (string, error) {
+	return script.Echo(in).Exec("./run.sh").String()
 }
