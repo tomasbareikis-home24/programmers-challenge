@@ -1,6 +1,7 @@
 package main
 
 import (
+	"os"
 	"strings"
 	"testing"
 
@@ -47,5 +48,6 @@ func Benchmark1(b *testing.B) {
 }
 
 func run(in string) (string, error) {
-	return script.Echo(in).Exec("./run.sh").String()
+	lang := os.Getenv("LANGUAGE")
+	return script.Echo(in).Exec("./run-" + lang + ".sh").String()
 }
