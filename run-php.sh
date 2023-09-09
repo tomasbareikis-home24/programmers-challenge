@@ -1,3 +1,3 @@
 #!/bin/sh
 
-php php/main.php
+XDEBUG_MODE=off php php/main.php
