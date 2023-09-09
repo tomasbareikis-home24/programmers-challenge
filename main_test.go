@@ -10,15 +10,15 @@ import (
 )
 
 type testCase struct {
-	in     string
-	expect string
+	inFile     string
+	expectFile string
 }
 
 func Test(t *testing.T) {
 	tests := map[string]testCase{
 		"1": {
-			in:     "haha",
-			expect: "haha",
+			inFile:     "tests/1/in.txt",
+			expectFile: "tests/1/expected.txt",
 		},
 	}
 
@@ -29,14 +29,16 @@ func Test(t *testing.T) {
 
 func doTest(tc *testCase) func(*testing.T) {
 	return func(t *testing.T) {
-		s, err := run(tc.in)
+		expectedOutput, err := script.File(tc.expectFile).String()
+		assert.NoError(t, err)
 
+		output, err := run(tc.inFile)
 		assert.NoError(t, err)
 
 		assert.Equal(
 			t,
-			strings.TrimSpace(tc.expect),
-			strings.TrimSpace(s),
+			strings.TrimSpace(expectedOutput),
+			strings.TrimSpace(output),
 		)
 	}
 }
@@ -47,7 +49,7 @@ func Benchmark1(b *testing.B) {
 	}
 }
 
-func run(in string) (string, error) {
+func run(inFile string) (string, error) {
 	lang := os.Getenv("LANGUAGE")
-	return script.Echo(in).Exec("./run-" + lang + ".sh").String()
+	return script.File(inFile).Exec("./run-" + lang + ".sh").String()
 }
