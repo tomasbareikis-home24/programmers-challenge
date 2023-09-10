@@ -46,9 +46,9 @@ func doTest(tc *testCase) func(*testing.T) {
 	}
 }
 
-func Benchmark1(b *testing.B) {
+func BenchmarkEasy(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		run("haha")
+		run("tests/easy/in.txt")
 	}
 }
 
