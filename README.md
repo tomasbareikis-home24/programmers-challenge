@@ -13,6 +13,8 @@ Let's have fun and celebrate Programmer's day with this challenge.
 
 ## Running tests locally
 
+Assuming you have [`docker`](https://docs.docker.com/engine/install/) installed.
+
 ### PHP 8.2
 
 ```shell

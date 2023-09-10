@@ -1,4 +1,4 @@
-name: Smoke test for building docker images
+name: Building docker images to run challenge locally
 
 on:
   push:
