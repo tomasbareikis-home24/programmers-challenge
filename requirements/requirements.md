@@ -13,11 +13,12 @@ covered by all students participating in the campaign for each team.
 Data is provided as **standard input** (keyboard) in the following format:
 
  * Lines contain the data of the participating students:
-    * Student team's name;
+    * student team's name;
     * step length in **centimeters**;
     * the number of steps taken each day of the campaign.
 
 If a student did not input the number of steps taken on a particular day, the value is 0.
+
 Data is separated by a single space.
 
 # Expected Results
@@ -25,14 +26,15 @@ Data is separated by a single space.
 Present the results as **standard output** (print to the screen):
 
 * Output a list of the total distance covered by students in each team:
-   * team name;
-   * the number of students who entered steps for every day of the campaign;
+   * team's name;
+   * the number of students who entered steps for **every** day of the campaign;
    * the total distance covered by the specified team in **kilometers**, rounded to two decimal places.
 
 If a participant did not input the number of steps taken on at least one day, their data is not used in the calculations.
-Data is separated by a single space.
 
-* One line should contain the data for one team name.
+Output data is separated by a single space.
+
+* One line should contain the data for one team.
 
 If there wasn't a single student in any team name who entered the number of steps every day of the campaign,
 then data for that team name does not need to be provided.

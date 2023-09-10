@@ -1,21 +1,21 @@
-# Beat entry level IT exam of Lithuania
+# Beat the IT exam of Lithuania
 
-Have you ever wondered if you could still pass `Information Technology` National-level Maturity Exam of Lithuania?
-How would you do it in reality? Are requirements could still be relevant for today's IT world practitioners?
+Have you ever wondered if you could pass `IT` National-level Maturity Exam of Lithuania?
 
-Let's have fun and celebrate Programmer's day with this challenge.
+We grabbed one of the programming tasks from the latest exam
+and tweaked it a bit by adding just little bit more of a challenge.
 
 ## How
 
- * Read the [requirements](requirements/requirements.md)
- * Write code in you favorite language (see [`go`](go/main.go), [`js`](js/main.js), [`php`](php/main.php) folders)
- * Create a Pull request and see automated tests check your results
+ * Read the [requirements](requirements/requirements.md).
+ * Write code in you favorite language (see [`go`](go/main.go), [`js`](js/main.js), [`php`](php/main.php) folders).
+ * Create a Pull request and see automated tests check your results.
 
 ## Running tests locally
 
 Assuming you have [`docker`](https://docs.docker.com/engine/install/) installed.
 
-### PHP 8.2
+### PHP 8
 
 ```shell
 docker run -v ${PWD}/php:/opt/php aurelijusbanelis/challenge:php
