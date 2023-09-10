@@ -1,0 +1,28 @@
+name: Smoke test for building docker images
+
+on:
+  push:
+    paths:
+      - 'Dockerfile'
+  pull_request:
+    paths:
+      - 'Dockerfile'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build for PHP
+        run: docker build --target php . -t aurelijusbanelis/callenge:php
+      - name: Build for JavaScript
+        run: docker build --target js . -t aurelijusbanelis/callenge:js
+      - name: Build for Go
+        run: docker build --target go . -t aurelijusbanelis/callenge:go
+      - name: Notice about manual push
+        run: |
+          echo "Binaries are not pushed automatically. Please push manually to https://hub.docker.com/r/aurelijusbanelis/callenge"
+          echo "docker push aurelijusbanelis/callenge:php"
+          echo "docker push aurelijusbanelis/callenge:js"
+          echo "docker push aurelijusbanelis/callenge:go"
