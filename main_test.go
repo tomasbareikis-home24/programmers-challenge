@@ -17,7 +17,7 @@ type testCase struct {
 func Test(t *testing.T) {
 	tests := map[string]testCase{}
 
-	dirs := []string{"easy", "empty", "one"}
+	dirs := []string{"easy", "empty", "one", "noone", "meter", "tiny"}
 	for _, d := range dirs {
 		tests[d] = testCase{
 			inFile:     "tests/" + d + "/in.txt",
