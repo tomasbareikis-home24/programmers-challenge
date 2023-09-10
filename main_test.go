@@ -20,9 +20,9 @@ func Test(t *testing.T) {
 			inFile:     "tests/easy/in.txt",
 			expectFile: "tests/easy/expected.txt",
 		},
-		"medium": {
-			inFile:     "tests/medium/in.txt",
-			expectFile: "tests/medium/expected.txt",
+		"empty": {
+			inFile:     "tests/empty/in.txt",
+			expectFile: "tests/empty/expected.txt",
 		},
 	}
 
