@@ -32,10 +32,10 @@ Present the results as **standard output** (print to the screen):
 If a participant did not input the number of steps taken on at least one day, their data is not used in the calculations.
 Data is separated by a single space.
 
-* One line should contain the data for one class category.
+* One line should contain the data for one team name.
 
-If there wasn't a single student in any class category who entered the number of steps every day of the campaign,
-then data for that class category does not need to be provided.
+If there wasn't a single student in any team name who entered the number of steps every day of the campaign,
+then data for that team name does not need to be provided.
 The list should be presented in the order as they were specified in the initial data file.
 
 # Example Input
