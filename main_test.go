@@ -16,9 +16,13 @@ type testCase struct {
 
 func Test(t *testing.T) {
 	tests := map[string]testCase{
-		"1": {
-			inFile:     "tests/1/in.txt",
-			expectFile: "tests/1/expected.txt",
+		"easy": {
+			inFile:     "tests/easy/in.txt",
+			expectFile: "tests/easy/expected.txt",
+		},
+		"medium": {
+			inFile:     "tests/medium/in.txt",
+			expectFile: "tests/medium/expected.txt",
 		},
 	}
 
