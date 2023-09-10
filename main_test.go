@@ -15,17 +15,16 @@ type testCase struct {
 }
 
 func Test(t *testing.T) {
-	tests := map[string]testCase{}
-
-	appendFunc := func(dir string) string {
-		tests[dir] = testCase{
-				inFile:     "tests/1/in.txt",
-				expectFile: "tests/1/expected.txt",
-			}
-		return ""
+	tests := map[string]testCase{
+		"easy": {
+			inFile:     "tests/easy/in.txt",
+			expectFile: "tests/easy/expected.txt",
+		},
+		"medium": {
+			inFile:     "tests/medium/in.txt",
+			expectFile: "tests/medium/expected.txt",
+		},
 	}
-
-	script.ListFiles("tests/*").FilterLine(appendFunc)
 
 	for name, tc := range tests {
 		t.Run(name, doTest(&tc))
