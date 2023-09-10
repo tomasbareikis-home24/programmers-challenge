@@ -22,7 +22,7 @@ docker run -v ${PWD}/php:/opt/php aurelijusbanelis/challenge:php
 ```
 Where your code is in `php` folder with `php/main.php` file.
 
-### JavaScript (Node 20)
+### JavaScript (Node 18)
 
 ```shell
 docker run -v ${PWD}/js:/opt/js aurelijusbanelis/challenge:js

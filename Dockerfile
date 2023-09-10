@@ -25,7 +25,7 @@ WORKDIR /opt
 ENV LANGUAGE=go
 CMD ["/opt/challenge"]
 
-FROM node:20.6.0-alpine3.18 as js
+FROM node:18.17.1-alpine3.18 as js
 COPY --from=builder /app/challenge /opt/challenge
 COPY --from=builder /app/tests /opt/tests
 COPY --from=builder /app/run-js.sh /opt/run-js.sh
