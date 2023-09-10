@@ -24,6 +24,10 @@ func Test(t *testing.T) {
 			inFile:     "tests/empty/in.txt",
 			expectFile: "tests/empty/expected.txt",
 		},
+		"one": {
+			inFile:     "tests/one/in.txt",
+			expectFile: "tests/one/expected.txt",
+		},
 	}
 
 	for name, tc := range tests {
