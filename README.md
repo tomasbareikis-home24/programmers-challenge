@@ -7,7 +7,7 @@ and tweaked it a bit by adding just little bit more of a challenge.
 
 ## How
 
- * Read the [requirements](requirements/requirements.md).
+ * Read the [rules](requirements/rules.md) and [requirements](requirements/requirements.md).
  * Write code in you favorite language (see [`go`](go/main.go), [`js`](js/main.js), [`php`](php/main.php) folders).
  * Create a Pull request and see automated tests check your results.
 

@@ -72,3 +72,11 @@ Where for each line:
  * First value (`AAA`): team name
  * Second value (`2`): number of students who entered the number of steps taken every day of the campaign
  * Third value (`63.11`): total distance covered in kilometers
+
+# Limitations
+
+- You cannot install any of the third party packages. You must rely only on your programming language of
+choice standard library.
+- All of the pre-installed software available in Github Actions [Ubuntu2204](https://github.com/actions/runner-images/blob/main/images/linux/Ubuntu2204-Readme.md) image is
+available to use.
+- Currently, we have set up examples for `js`, `php` and `go` programming languages. Feel free to add more!
