@@ -14,7 +14,7 @@ COPY --from=builder /app/run-php.sh /opt/run-php.sh
 VOLUME /opt/php
 WORKDIR /opt
 ENV LANGUAGE=php
-CMD ["/opt/challenge"]
+CMD ["/opt/challenge", "-test.v"]
 
 FROM golang:1.21.1-alpine3.18 as go
 COPY --from=builder /app/challenge /opt/challenge
@@ -23,7 +23,7 @@ COPY --from=builder /app/run-go.sh /opt/run-go.sh
 VOLUME /opt/go
 WORKDIR /opt
 ENV LANGUAGE=go
-CMD ["/opt/challenge"]
+CMD ["/opt/challenge", "-test.v"]
 
 FROM node:18.17.1-alpine3.18 as js
 COPY --from=builder /app/challenge /opt/challenge
@@ -32,5 +32,5 @@ COPY --from=builder /app/run-js.sh /opt/run-js.sh
 VOLUME /opt/js
 WORKDIR /opt
 ENV LANGUAGE=js
-CMD ["/opt/challenge"]
+CMD ["/opt/challenge", "-test.v"]
 
