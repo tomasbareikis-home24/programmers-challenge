@@ -1,12 +1,6 @@
 name: Building docker images to run challenge locally
 
-on:
-  push:
-    paths:
-      - 'Dockerfile'
-  pull_request:
-    paths:
-      - 'Dockerfile'
+on: [push]
 
 jobs:
   build:
