@@ -19,7 +19,7 @@ Data is provided as **standard input** (keyboard) in the following format:
 
 If a student did not input the number of steps taken on a particular day, the value is 0.
 
-Data is separated by a single space.
+Data is separated by space.
 
 # Expected Results
 
