@@ -21,11 +21,13 @@ jobs:
       - name: Build for Go
         run: docker build --target go . -t aurelijusbanelis/challenge:go
       - name: Login to Docker Hub
+        if: github.event_name == 'push'
         uses: docker/login-action@v2
         with:
           username: aurelijuschallengebot
           password: ${{ secrets.DOCKERHUB_TOKEN_CHALLENGE_BOT }}
       - name: Pushing latest images
+        if: github.event_name == 'push'
         run: |
           docker push aurelijusbanelis/challenge:php
           docker push aurelijusbanelis/challenge:js
