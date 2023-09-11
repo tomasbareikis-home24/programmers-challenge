@@ -17,11 +17,12 @@ type testCase struct {
 func Test(t *testing.T) {
 	tests := map[string]testCase{}
 
-	dirs := []string{"easy", "empty", "one", "noone", "meter", "tiny"}
+	dirs, _ := os.ReadDir("./tests")
 	for _, d := range dirs {
-		tests[d] = testCase{
-			inFile:     "tests/" + d + "/in.txt",
-			expectFile: "tests/" + d + "/expected.txt",
+		name := d.Name()
+		tests[name] = testCase{
+			inFile:     "tests/" + name + "/in.txt",
+			expectFile: "tests/" + name + "/expected.txt",
 		}
 	}
 
