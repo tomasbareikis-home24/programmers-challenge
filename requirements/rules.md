@@ -2,7 +2,7 @@ Rules
 =====
 
 - The submitted program passing the most test cases wins.
-- In case of a tie, the program best at benchmarks wins.
+- In case of a tie, the program passing the CI build first wins.
 - Of course, you cannot alter the test cases :)
 
 ## A few more things
