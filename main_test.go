@@ -46,12 +46,6 @@ func doTest(tc *testCase) func(*testing.T) {
 	}
 }
 
-func BenchmarkEasy(b *testing.B) {
-	for i := 0; i < b.N; i++ {
-		run("tests/easy/in.txt")
-	}
-}
-
 func run(inFile string) (string, error) {
 	lang := os.Getenv("LANGUAGE")
 	return script.File(inFile).Exec("./run-" + lang + ".sh").String()

@@ -19,5 +19,3 @@ jobs:
       - name: Test
         run: LANGUAGE=go go test -v ./... -count 1
 
-      - name: Benchmark
-        run: LANGUAGE=go go test -bench=. -benchtime=10s

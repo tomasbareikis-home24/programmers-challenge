@@ -18,6 +18,3 @@ jobs:
 
       - name: Test
         run: LANGUAGE=js go test -v ./... -count 1
-
-      - name: Benchmark
-        run: LANGUAGE=js go test -bench=. -benchtime=10s
