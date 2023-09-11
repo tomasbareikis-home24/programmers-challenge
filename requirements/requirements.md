@@ -28,7 +28,7 @@ Present the results as **standard output** (print to the screen):
 * Output a list of the total distance covered by students in each team:
    * team's name;
    * the number of students who entered steps for **every** day of the campaign;
-   * the total distance covered by the specified team in **kilometers**, rounded to two decimal places.
+   * the total distance covered by the specified team in **kilometers**, rounded up to two decimal places.
 
 If a participant did not input the number of steps taken on at least one day, their data is not used in the calculations.
 
