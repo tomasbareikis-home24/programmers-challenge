@@ -11,6 +11,8 @@ and tweaked it a bit by adding just little bit more of a challenge.
  * Write code in you favorite language (see [`go`](go/main.go), [`js`](js/main.js), [`php`](php/main.php) folders).
  * Create a Pull request and see automated tests check your results.
 
+![How to play](docs/how-to-play.gif)
+
 ## Running tests locally
 
 Assuming you have [`docker`](https://docs.docker.com/engine/install/) installed.
