@@ -1,2 +1,4 @@
 # Prevent commiting binary while testing build commands
 challenge
+cs/bin
+cs/obj
