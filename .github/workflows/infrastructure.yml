@@ -1,6 +1,9 @@
 name: Building docker images to run challenge locally
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
