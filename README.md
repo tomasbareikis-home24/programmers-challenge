@@ -47,7 +47,7 @@ docker build --target php . -t aurelijusbanelis/challenge:php
 docker build --target js . -t aurelijusbanelis/challenge:js
 ```
 
-See [Dockerfile](Dockerfile).
+See [Dockerfile](Dockerfile) and [GitHub Actions](.github/workflows/infrastructure.yml) for details.
 
 ## References
 
