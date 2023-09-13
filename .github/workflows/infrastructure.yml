@@ -4,10 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'tests/**'
-      - 'Dockerfile'
-      - 'main_test.go'
 
 jobs:
   build:

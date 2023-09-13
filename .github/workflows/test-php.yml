@@ -2,16 +2,6 @@ name: Run tests
 
 on:
   pull_request:
-    types:
-      - opened
-      - synchronize
-      - edited
-      - labeled
-      - ready_for_review
-      - reopened
-    paths:
-      - 'php/**'
-  push:
     paths:
       - 'php/**'
 
