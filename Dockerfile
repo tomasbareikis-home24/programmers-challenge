@@ -34,3 +34,11 @@ WORKDIR /opt
 ENV LANGUAGE=js
 CMD ["/opt/challenge", "-test.v"]
 
+FROM mcr.microsoft.com/dotnet/sdk:5.0 as cs
+COPY --from=builder /app/challenge /opt/challenge
+COPY --from=builder /app/tests /opt/tests
+COPY --from=builder /app/run-cs.sh /opt/run-cs.sh
+VOLUME /opt/cs
+WORKDIR /opt
+ENV LANGUAGE=cs
+CMD ["/opt/challenge", "-test.v"]

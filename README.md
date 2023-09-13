@@ -37,6 +37,14 @@ docker run -v ${PWD}/go:/opt/go aurelijusbanelis/challenge:go
 ```
 Where your code is in `go` folder with `go/main.go` file.
 
+### C# (dotnet 5)
+
+```shell
+docker run -v ${PWD}/cs:/opt/cs aurelijusbanelis/challenge:cs
+```
+Where your code is in `cs` folder with `cs/Program.cs` file.
+
+
 ### Not trusting docker?
 
 Build it yourself:
@@ -44,6 +52,7 @@ Build it yourself:
 docker build --target go . -t aurelijusbanelis/challenge:go
 docker build --target php . -t aurelijusbanelis/challenge:php
 docker build --target js . -t aurelijusbanelis/challenge:js
+docker build --target cs . -t aurelijusbanelis/challenge:cs
 ```
 
 See [Dockerfile](Dockerfile) and [GitHub Actions](.github/workflows/infrastructure.yml) for details.
