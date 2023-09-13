@@ -11,15 +11,16 @@ on:
       - reopened
     paths:
       - 'php/**'
-  push:
-    paths:
-      - 'go/**'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: ${{github.event.pull_request_target.head.ref}}
+          repository: ${{github.event.pull_request_target.head.repo.full_name}}
 
       - name: Set up Go
         uses: actions/setup-go@v4
